@@ -2,9 +2,9 @@ class Product
   attr_accessor :name, :price, :quantity
 
   def initialize(name, price)
-	  @name = name
-	  @price = price
-	  @quantity = 2
+    @name = name
+    @price = price
+    @quantity = 2
   end
 
   def increase_quantity
