@@ -25,11 +25,11 @@ class VendingMachine
   end
 
   def insert(amount)
-  	@money_manager.insert(amount)
+    @money_manager.insert(amount)
   end
 
   def total_inserted
-  	@money_manager.total_inserted
+    @money_manager.total_inserted
   end
 
   def select_product(code)
