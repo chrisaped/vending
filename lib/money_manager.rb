@@ -15,15 +15,11 @@ class MoneyManager
     @slot.clear
   end
 
-  def insert
-    puts "Please enter a denomination to insert: #{@denominations}"
-    denomination = gets.chomp.to_i
+  def insert(denomination)
     if @denominations.include?(denomination)
       @slot << denomination
-      puts "Total money inserted: #{total_inserted}"
     else
-      puts "Incorrect denomination. Please try again."
-      insert_money
+      puts "Incorrect denomination"
     end
   end		
 
@@ -34,6 +30,7 @@ class MoneyManager
     else
       dispense_change(change)
     end
+    reset
   end
 
   def dispense_change(amount)

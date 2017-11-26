@@ -7,16 +7,11 @@ class Product
     @quantity = 2
   end
 
-  def increase_quantity
-    puts "Please enter the new quantity of this product."
-    quantity = gets.chomp.to_i
+  def increase_quantity(quantity)
     if quantity > 0
       @quantity += quantity
-      puts "Your product's quantity has been updated!"
-      puts "#{@name}, Quantity: #{@quantity}"
     else
-      puts "Incorrect quantity. Please try again."
-      increase_quantity
+      puts "Incorrect quantity"
     end		
   end	
 end
